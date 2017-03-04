@@ -4,7 +4,6 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -49,7 +48,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Oe7-iy-qqK">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" directionalLockEnabled="YES" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oe7-iy-qqK">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oaP-WU-QiL" userLabel="containerView">
@@ -142,6 +141,10 @@
         <scene sceneID="YUY-E2-dvE">
             <objects>
                 <viewController id="ww2-5C-5hX" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="p4W-dB-dtN"/>
+                        <viewControllerLayoutGuide type="bottom" id="jTN-or-ZAh"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="OiV-D2-WVJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -156,11 +159,15 @@
         <scene sceneID="2yX-7d-hgc">
             <objects>
                 <viewController id="KZ7-GM-7LZ" customClass="MiddleViewController" customModule="SnapchatLayout" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ycr-ir-sLs"/>
+                        <viewControllerLayoutGuide type="bottom" id="YuD-u9-IxT"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="MD8-jE-UhL" userLabel="mainView">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gW2-qK-W6j">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gW2-qK-W6j">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wc3-kt-ZLQ" userLabel="containerView">
@@ -229,6 +236,10 @@
         <scene sceneID="txv-rl-wIo">
             <objects>
                 <viewController id="q3L-a6-zdL" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hpp-jf-a4E"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vue-bi-RsC"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="J0M-TT-CRR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -243,6 +254,10 @@
         <scene sceneID="emj-ut-sCI">
             <objects>
                 <viewController id="oib-RM-ZoW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="phm-8R-v0L"/>
+                        <viewControllerLayoutGuide type="bottom" id="Rg5-1p-vr9"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e9Q-UY-RWj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -257,6 +272,10 @@
         <scene sceneID="zPw-CJ-4dg">
             <objects>
                 <viewController id="dfs-s2-vBT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Z04-kg-q4b"/>
+                        <viewControllerLayoutGuide type="bottom" id="XsU-jQ-9vm"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="tKK-bB-c8x">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,6 +289,10 @@
         <scene sceneID="XpC-oz-sdk">
             <objects>
                 <viewController id="5Vb-d9-qrT" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="gMX-pg-RE8"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfT-oh-ejn"/>
+                    </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="uLA-8d-0bX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

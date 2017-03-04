@@ -81,5 +81,11 @@ extension MainLayoutController: UIScrollViewDelegate {
         }
 
     }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        if scrollView == horizontalScrollView {
+            // Do not allow vertical scroll when it's not middle page in horizontal scroll.
+            verticalScrollView.isScrollEnabled = (hPage == 1)
+        }
+    }
     
 }
