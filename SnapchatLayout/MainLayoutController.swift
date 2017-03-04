@@ -8,6 +8,18 @@
 
 import UIKit
 
+enum ScrollingDirection {
+    case vertical
+    case horizontal
+}
+
+
+
+private let topColor = #colorLiteral(red: 0.63, green: 0.84, blue: 0.35, alpha: 1)
+private let bottomColor = #colorLiteral(red: 0.3529411765, green: 0.7843137255, blue: 0.9803921569, alpha: 1)
+private let leftColor = #colorLiteral(red: 1, green: 0.7161940546, blue: 0.6508789062, alpha: 1)
+private let rightColor = #colorLiteral(red: 0.9764705896, green: 0.850980401, blue: 0.5490196347, alpha: 1)
+
 class MainLayoutController: NSObject {
 
     weak var horizontalScrollView: UIScrollView! {
@@ -46,6 +58,22 @@ class MainLayoutController: NSObject {
         }
     }
 
+    func colorForNextSpace(direction: ScrollingDirection) -> UIColor {
+        if direction == .vertical {
+            if 0 == vPage {
+                return topColor
+            } else {
+                return bottomColor
+            }
+        } else {
+            if 0 == hPage {
+                return leftColor
+            } else {
+                return rightColor
+            }
+        }
+    }
+
     fileprivate func vPageOffset() -> CGFloat {
         return verticalScrollView.contentOffset.y.truncatingRemainder(dividingBy: screenHeight)
     }
@@ -63,20 +91,18 @@ extension MainLayoutController: UIScrollViewDelegate {
             guard vPageOffset() > 0 else { return }
 
             let scrollProgress = vPageOffset() / screenHeight
-            print("Vertical scroll progress: \(scrollProgress)")
 
             for listener in verticalScrollChanged {
-                listener(scrollProgress)
+                listener(vPage == 0 ? 1 - scrollProgress : scrollProgress)
             }
         }
         else if scrollView == horizontalScrollView {
             guard hPageOffset() > 0 else { return }
 
             let scrollProgress = hPageOffset() / screenWidth
-            print("Horizontal scroll progress: \(scrollProgress)")
 
             for listener in horizontalScrollChanged {
-                listener(scrollProgress)
+                listener(hPage == 0 ? 1 - scrollProgress : scrollProgress)
             }
         }
 

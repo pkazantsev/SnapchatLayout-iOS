@@ -148,7 +148,23 @@
                     <view key="view" contentMode="scaleToFill" id="OiV-D2-WVJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.63" green="0.83999999999999997" blue="0.34999999999999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Rhm-EH-xMj">
+                                <rect key="frame" x="56" y="166.5" width="262.5" height="333.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Rhm-EH-xMj" firstAttribute="centerY" secondItem="OiV-D2-WVJ" secondAttribute="centerY" id="Tdq-8g-Lu1"/>
+                            <constraint firstItem="Rhm-EH-xMj" firstAttribute="width" secondItem="OiV-D2-WVJ" secondAttribute="width" multiplier="0.7" id="UHr-s5-NJc"/>
+                            <constraint firstItem="Rhm-EH-xMj" firstAttribute="centerX" secondItem="OiV-D2-WVJ" secondAttribute="centerX" id="c8p-ae-4mj"/>
+                            <constraint firstItem="Rhm-EH-xMj" firstAttribute="height" secondItem="OiV-D2-WVJ" secondAttribute="height" multiplier="0.5" id="fg3-T8-1Td"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gb6-x0-ae0" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -243,7 +259,23 @@
                     <view key="view" contentMode="scaleToFill" id="J0M-TT-CRR">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SQT-mM-F8H">
+                                <rect key="frame" x="56" y="167" width="262.5" height="333.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="SQT-mM-F8H" firstAttribute="width" secondItem="J0M-TT-CRR" secondAttribute="width" multiplier="0.7" id="3C7-JG-U5f"/>
+                            <constraint firstItem="SQT-mM-F8H" firstAttribute="centerY" secondItem="J0M-TT-CRR" secondAttribute="centerY" id="9eu-76-7YI"/>
+                            <constraint firstItem="SQT-mM-F8H" firstAttribute="height" secondItem="J0M-TT-CRR" secondAttribute="height" multiplier="0.5" id="XLH-fI-uRp"/>
+                            <constraint firstItem="SQT-mM-F8H" firstAttribute="centerX" secondItem="J0M-TT-CRR" secondAttribute="centerX" id="jcF-cM-wH7"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="osW-dZ-9ng" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -261,7 +293,23 @@
                     <view key="view" contentMode="scaleToFill" id="e9Q-UY-RWj">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="1" green="0.71619405459999996" blue="0.6508789062" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lyc-mH-gkM">
+                                <rect key="frame" x="56" y="167" width="262.5" height="333.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="lyc-mH-gkM" firstAttribute="centerX" secondItem="e9Q-UY-RWj" secondAttribute="centerX" id="6d1-pN-Xru"/>
+                            <constraint firstItem="lyc-mH-gkM" firstAttribute="width" secondItem="e9Q-UY-RWj" secondAttribute="width" multiplier="0.7" id="REo-ew-Ubs"/>
+                            <constraint firstItem="lyc-mH-gkM" firstAttribute="centerY" secondItem="e9Q-UY-RWj" secondAttribute="centerY" id="mXB-4o-zdZ"/>
+                            <constraint firstItem="lyc-mH-gkM" firstAttribute="height" secondItem="e9Q-UY-RWj" secondAttribute="height" multiplier="0.5" id="w4F-Nc-6Sg"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fTo-mF-Hd3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -296,7 +344,23 @@
                     <view key="view" contentMode="scaleToFill" id="uLA-8d-0bX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.97647058959999999" green="0.85098040100000005" blue="0.54901963470000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULx-bJ-sCV">
+                                <rect key="frame" x="56" y="167" width="262.5" height="333.5"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="ULx-bJ-sCV" firstAttribute="centerY" secondItem="uLA-8d-0bX" secondAttribute="centerY" id="3jq-Qn-czY"/>
+                            <constraint firstItem="ULx-bJ-sCV" firstAttribute="centerX" secondItem="uLA-8d-0bX" secondAttribute="centerX" id="JmW-3T-1PX"/>
+                            <constraint firstItem="ULx-bJ-sCV" firstAttribute="height" secondItem="uLA-8d-0bX" secondAttribute="height" multiplier="0.5" id="M9h-36-OAP"/>
+                            <constraint firstItem="ULx-bJ-sCV" firstAttribute="width" secondItem="uLA-8d-0bX" secondAttribute="width" multiplier="0.7" id="muk-Qb-wKq"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UTC-SL-0HF" userLabel="First Responder" sceneMemberID="firstResponder"/>

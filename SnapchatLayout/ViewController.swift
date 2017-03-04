@@ -25,6 +25,8 @@ class ViewController: UIViewController {
     @IBOutlet weak var scrollRightLabel: UILabel!
     @IBOutlet weak var scrollRightLabelCenterX: NSLayoutConstraint!
 
+    var overlay: UIView?
+
     let layoutController = MainLayoutController()
 
     override func viewDidLoad() {
@@ -46,38 +48,66 @@ class ViewController: UIViewController {
         layoutController.vPage = 1
         layoutController.verticalScrollChanged.append({ [unowned self] progress in
             self.moveLabelsVertically(progress)
+            self.animateOverlay(progress, direction: .vertical)
         })
         layoutController.horizontalScrollChanged.append({ [unowned self] progress in
             self.moveLabelsHorizontally(progress)
+            self.animateOverlay(progress, direction: .horizontal)
         })
     }
 
     private func moveLabelsVertically(_ scrollProgress: CGFloat) {
         if layoutController.vPage == 0 {
-            let progress = 1 - scrollProgress
-            scrollUpLabelCenterY.constant = view.frame.height / 2.0 * (progress / 2)
+            let progress = scrollProgress / 2
+            scrollUpLabelCenterY.constant = view.frame.height * progress / 2.0
             scrollUpLabel.alpha = 0.3 + progress
-            print("Scroll up progress: \(progress)")
         } else {
             let progress = scrollProgress / 2
-            scrollDownLabelCenterY.constant = -view.frame.height / 2.0 * (progress / 2)
+            scrollDownLabelCenterY.constant = -view.frame.height * progress / 2.0
             scrollDownLabel.alpha = 0.3 + progress
-            print("Scroll down progress: \(progress)")
         }
     }
 
     private func moveLabelsHorizontally(_ scrollProgress: CGFloat) {
         if layoutController.hPage == 0 {
-            let progress = 1 - scrollProgress
-            scrollLeftLabelCenterX.constant = view.frame.width / 2.0 * (progress / 2)
+            let progress = scrollProgress / 2
+            scrollLeftLabelCenterX.constant = view.frame.width * progress / 2.0
             scrollLeftLabel.alpha = 0.3 + progress
-            print("Scroll left progress: \(progress)")
         } else {
             let progress = scrollProgress / 2
-            scrollRightLabelCenterX.constant = -view.frame.width / 2.0 * (progress / 2)
+            scrollRightLabelCenterX.constant = -view.frame.width * progress / 2.0
             scrollRightLabel.alpha = 0.3 + progress
-            print("Scroll right progress: \(progress)")
         }
+    }
+
+    private func animateOverlay(_ scrollProgress: CGFloat, direction: ScrollingDirection) {
+        addOverlayIfNeeded()
+        guard let overlay = self.overlay else { return }
+
+        if overlay.backgroundColor == nil {
+            overlay.backgroundColor = layoutController.colorForNextSpace(direction: direction)
+        }
+
+        overlay.alpha = scrollProgress
+
+        if scrollProgress < 0.01 {
+            overlay.backgroundColor = nil
+        }
+    }
+
+    private func addOverlayIfNeeded() {
+        guard self.overlay == nil else { return }
+
+        let overlay = UIView()
+        overlay.translatesAutoresizingMaskIntoConstraints = false
+        view.insertSubview(overlay, at: 1)
+
+        overlay.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        overlay.leftAnchor.constraint(equalTo: view.leftAnchor).isActive = true
+        overlay.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        overlay.rightAnchor.constraint(equalTo: view.rightAnchor).isActive = true
+
+        self.overlay = overlay
     }
 }
 
